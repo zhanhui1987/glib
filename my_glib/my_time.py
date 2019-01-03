@@ -24,26 +24,26 @@ def now():
     return _format_time("%Y/%m/%d %H:%M:%S")
 
 
-def curdate():
+def today():
     # 当前日期
     return _format_time("%Y/%m/%d")
 
 
-def curdate2():
+def today2():
     # 另外一种格式的当前日期
     return _format_time("%Y-%m-%d")
 
 
-def curdate3():
+def today3():
     return _format_time("%Y.%m.%d")
 
 
-def curmonth():
+def current_month():
     # 当前月
     return _format_time("%m")
 
 
-def curyear():
+def current_year():
     # 当前年
     return _format_time("%Y")
 
@@ -55,10 +55,10 @@ def first_day_of_curmonth():
 
 def last_day_of_curmonth():
     # 当前月的最后一天
-    current_year = curyear()
-    current_month = curmonth()
-    last_day = calendar.monthrange(int(current_year), int(current_month))[1]
-    return "%s-%s-%s" % (current_year, current_month, last_day)
+    cur_year = current_year()
+    cur_month = current_month()
+    last_day = calendar.monthrange(int(cur_year), int(cur_month))[1]
+    return "%s-%s-%s" % (current_year(), current_month(), last_day)
 
 
 def is_valid_date(date_string):
@@ -76,9 +76,9 @@ def is_valid_date(date_string):
 
 if __name__ == "__main__":
     print("now: %s" % now())
-    print("curdate: %s" % curdate())
-    print("curdate2: %s" % curdate2())
-    print("curyear: %s" % curyear())
-    print("curmonth: %s" % curmonth())
+    print("curdate: %s" % today())
+    print("curdate2: %s" % today2())
+    print("curyear: %s" % current_year())
+    print("curmonth: %s" % current_month())
     print("first day of curmonth: %s" % first_day_of_curmonth())
     print("last day of curmonth: %s" % last_day_of_curmonth())
