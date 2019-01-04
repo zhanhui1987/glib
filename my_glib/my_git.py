@@ -627,6 +627,8 @@ if __name__ == "__main__":
     # print(repo_obj.checkout_file())
     # print(repo_obj.modify_diff_files)
 
-    print(repo_obj.commit("Commit my_modify file", commit_all=True))
+    # print(repo_obj.commit("Commit my_modify file", commit_all=True))
+
+    # print(repo_obj.push())
 
     print(repo_obj.err)
