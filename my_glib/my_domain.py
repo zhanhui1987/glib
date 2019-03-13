@@ -105,5 +105,21 @@ def check_valid_ip(ip):
     return is_valid_ip
 
 
+def is_valid_domain(domain):
+    """
+    检测传入的domain是否是正确的主域名格式。
+    :param domain: 待检测的主域名
+    :return:
+    """
+
+    check = False
+
+    top_domain = get_top_domain(domain)
+    if top_domain == domain:
+        check = True
+
+    return check
+
+
 if __name__ == "__main__":
     main()
